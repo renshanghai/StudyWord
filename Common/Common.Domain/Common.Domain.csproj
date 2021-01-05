@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Common.Domain</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\IWmsOutboundManager.cs" />
+    <Compile Remove="Interfaces\IWmsStockManager.cs" />
+    <Compile Remove="Models\WmsApplyGoodsForm.cs" />
+    <Compile Remove="Models\WmsStockSNForm.cs" />
+    <Compile Remove="Models\WmsWarehousingGoodsForm.cs" />
+    <Compile Remove="Models\WmsWarehousingSNForm.cs" />
+    <Compile Remove="Repositorys\IWmsApplyGoodsChildRepository.cs" />
+    <Compile Remove="Repositorys\IWmsApplyGoodsRepository.cs" />
+    <Compile Remove="Repositorys\IWmsOutboundChildRepository.cs" />
+    <Compile Remove="Repositorys\IWmsOutboundRepository.cs" />
+    <Compile Remove="Repositorys\IWmsStockRepository.cs" />
+    <Compile Remove="Repositorys\IWmsStockSNRepository.cs" />
+    <Compile Remove="Repositorys\IWmsWarehousingSNRepository.cs" />
+    <Compile Remove="WmsOutboundManager.cs" />
+    <Compile Remove="WmsStockManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
+    <PackageReference Include="OneForAll.Core" Version="1.0.4" />
+    <PackageReference Include="OneForAll.EFCore" Version="1.0.0" />
+    <PackageReference Include="OneForAll.File" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NPOI">
+      <HintPath>..\..\dll\NPOI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositorys\" />
+  </ItemGroup>
+
+</Project>
